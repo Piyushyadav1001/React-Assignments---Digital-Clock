@@ -9,7 +9,7 @@ class App extends React.Component {
   componentDidMount() {
     this.change = setInterval(() => {
       this.setState({ time: new Date() });
-    }, 1 * 1000); // every 1 seconds
+    }, 1 * 1000);
   }
 
   componentWillUnmount() {
