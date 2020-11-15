@@ -7,18 +7,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.update = setInterval(() => {
+    this.change = setInterval(() => {
       this.setState({ time: new Date() });
     }, 1 * 1000); // every 1 seconds
   }
 
   componentWillUnmount() {
-    clearInterval(this.update);
+    clearInterval(this.change);
   }
-
   render() {
     const { time } = this.state;
-
     return (
       <div className="Clock">
         <h3 id="time">{time.toLocaleTimeString()}</h3>
